@@ -9,4 +9,4 @@ Nosso objetivo é criar um sistema de gerenciamento de tarefas utilizando tecnol
 ## Andamento do projeto
 
 ### Diagrama relacional
-<img scr = "/img/diagrama-relacoes.jpg">
+<img scr = "./img/diagrama-relacoes.jpg">
