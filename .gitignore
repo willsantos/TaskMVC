@@ -147,3 +147,5 @@ Task/.vs/Task/FileContentIndex/ba65efa3-999f-4d71-873d-fc4c6ad12ed7.vsidx
 Task/.vs/Task/FileContentIndex/6f550fb4-8832-4b4a-bf3b-92320db12fad.vsidx
 Task/.vs/Task/FileContentIndex/6994dce1-42b4-4598-8c2d-61a224d57f68.vsidx
 Task/.vs/Task/FileContentIndex/cd127a90-fbcd-4503-8f22-7381a6f3466b.vsidx
+*.vsidx
+/Task/.vs/TaskManager/FileContentIndex
