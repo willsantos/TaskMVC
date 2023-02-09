@@ -7,26 +7,52 @@ namespace Entities.Notifications
 
         public Notifies()
         {
-            Notitycoes = new List<Notifies>();
+            Notifications = new List<Notifies>();
         }
 
         [NotMapped]
-        public string NomePropriedade { get; set; }
+        public string PropName { get; set; }
 
         [NotMapped]
-        public string mensagem { get; set; }
+        public string message { get; set; }
 
         [NotMapped]
-        public List<Notifies> Notitycoes;
+        public List<Notifies> Notifications;
 
-        public bool ValidarPropriedadeString(string valor, string nomePropiedade)
+        public bool ValidPropString(string value, string propName)
         {
-            if (string.IsNullOrWhiteSpace(valor) || string.IsNullOrWhiteSpace(nomePropiedade))
+            if (string.IsNullOrWhiteSpace(value) || string.IsNullOrWhiteSpace(propName))
             {
-                Notitycoes.Add(new Notifies
+                Notifications.Add(new Notifies
                 {
-                    mensagem = "Campro obrigatório",
-                    NomePropriedade = nomePropiedade
+                    message = "Required Field",
+                    PropName = propName
+                });
+                return false;
+            }
+            return true;
+        }
+
+        public bool ValidPropInt(int value, string propName)
+        {
+            if(value <1 || string.IsNullOrWhiteSpace(propName)){
+                Notifications.Add(new Notifies
+                {
+                    message = "Value must be more than 0",
+                    PropName = propName
+                });
+                return false;
+            }
+            return true;
+        }
+
+        public bool ValidPropDecimal(decimal value, string propName)
+        {
+            if (value < 1 || string.IsNullOrWhiteSpace(propName)){
+                Notifications.Add(new Notifies
+                {
+                    message = "Value must be more than 0",
+                    PropName = propName
                 });
                 return false;
             }
